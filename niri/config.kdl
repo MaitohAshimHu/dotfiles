@@ -1,0 +1,84 @@
+// ~/.config/niri/config.kdl
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+    }
+}
+
+layout {
+    gaps 8 // Minimal gaps for that clean look
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    
+    focus-ring {
+        width 2
+        active-color "#00ff99" // Neon Green (Cybersecurity vibe)
+        inactive-color "#505050"
+    }
+}
+
+binds {
+    // --- APP LAUNCHERS ---
+    Super+Return { spawn "alacritty"; }
+    Super+D { spawn "fuzzel"; }
+    Super+W { spawn "firefox"; } // Or your preferred browser
+
+    // --- WINDOW MANAGEMENT (Vim keys prefered) ---
+    Super+Q { close-window; }
+    
+    // Focus (Vim style)
+    Super+Left { focus-column-left; }
+    Super+Right { focus-column-right; }
+    Super+Up { focus-window-down; }
+    Super+Down { focus-window-up; }
+
+    // Move Windows
+    Super+Ctrl+Left { move-column-left; }
+    Super+Ctrl+Right { move-column-right; }
+    
+    // Resize
+    Super+Minus { set-column-width "-10%"; }
+    Super+Equal { set-column-width "+10%"; }
+    Super+F { maximize-column; }
+
+    // --- SYSTEM ---
+    Super+Shift+E { quit; }
+    Super+Escape { spawn "swaylock"; }
+    
+    // Screenshots
+    Print { screenshot; }
+
+    // --- VERTICAL STACKING (The Magic Fix) ---
+    
+    // Move the current window INTO the column on the left
+    // Usage: Open two windows. Focus the Right one. Press Mod+[ to stack it under the Left one.
+    Super+BracketLeft  { consume-window-into-column; }
+    
+    // Kick a window OUT of the stack (make it its own column again)
+    Super+BracketRight { expel-window-from-column; }
+
+    // --- VERTICAL RESIZING ---
+    // Make the current window shorter or taller within the stack
+    Super+Shift+Minus { set-window-height "-10%"; }
+    Super+Shift+Equal { set-window-height "+10%"; }
+}
+
+// Autostart essential tools
+spawn-at-startup "xwayland-satellite" // For compatibility with older apps
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+//spawn-at-startup "swaybg" "-c" "#11111b" // Solid dark background
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/ahenkari/Pictures/Wallpapers/city.jpg"

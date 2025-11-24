@@ -1,0 +1,34 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(17, 17, 27, 0.9); /* Dark Void */
+    color: #00ff99; /* Matrix Green */
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #505050;
+}
+
+#workspaces button.active {
+    color: #00ff99;
+}
+
+#clock, #battery, #cpu, #memory, #network {
+    padding: 0 10px;
+    color: #e0e0e0;
+}
+
+#cpu { color: #ff5555; } /* Red for CPU load */
+#memory { color: #bd93f9; } /* Purple for RAM */
+#custom-gpu {
+    color: #76b900; /* The Official NVIDIA Green */
+    padding: 0 10px;
+    font-weight: bold;
+}
