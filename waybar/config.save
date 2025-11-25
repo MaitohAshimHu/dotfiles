@@ -5,7 +5,7 @@
     "spacing": 4,
     "modules-left": ["niri/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/gpu", "tray", "pulseaudio", "backlight", "cpu", "memory", "battery", "network"],
+    "modules-right": ["custom/gpu", "tray", "pulseaudio", "backlight", "cpu", "memory", "battery", 
 
     "niri/workspaces": {
         "format": "{icon}",
@@ -49,20 +49,4 @@
         "icon-size": 21,
         "spacing": 10
     }
-},
-
-
-"backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
-},
-
-"pulseaudio": {
-    "scroll-step": 5,
-    "format": "{icon} {volume}%",
-    "format-muted": " Muted",
-    "format-icons": {
-        "default": ["", "", ""]
-    },
-    "on-click": "pavucontrol"
 }

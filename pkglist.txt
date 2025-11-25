@@ -15,8 +15,10 @@ bluedevil
 bluez
 bluez-utils
 breeze-gtk
+brightnessctl
 btrfs-progs
 cantarell-fonts
+chromium
 code
 cryptsetup
 cuda
@@ -156,6 +158,7 @@ nvidia
 nvidia-hook
 nvidia-inst
 nvidia-lts
+nvm
 okular
 opencl-nvidia
 openssh

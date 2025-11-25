@@ -32,3 +32,13 @@ window#waybar {
     padding: 0 10px;
     font-weight: bold;
 }
+
+#pulseaudio {
+    color: #8be9fd; /* Cyan */
+    padding: 0 10px;
+}
+
+#backlight {
+    color: #ffb86c; /* Gold */
+    padding: 0 10px;
+}
