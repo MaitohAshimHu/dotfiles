@@ -17,6 +17,7 @@ bluez-utils
 breeze-gtk
 brightnessctl
 btrfs-progs
+burpsuite
 cantarell-fonts
 chromium
 code
